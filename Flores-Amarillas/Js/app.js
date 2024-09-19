@@ -65,7 +65,7 @@ function DibujarFlor(x, y, NumeroPetalos, RadioXPetalo, RadioYPetalo, AltoTrazo)
             ctx.moveTo(x, y);
             ctx.lineTo(x, NuevaY);
             ctx.lineWidth = 3;
-            ctx.strokeStyle = 'black';
+            ctx.strokeStyle = 'green';
             ctx.stroke();
             NuevaY += AltoTallo;
             setTimeout(DibujarTallo, 100);
@@ -77,8 +77,8 @@ function DibujarFlor(x, y, NumeroPetalos, RadioXPetalo, RadioYPetalo, AltoTrazo)
                 if (CuantosPasos <= Pasos) {
                     const PetaloY = y + 250 - RadioYPetalo;
                     const PetaloY2 = y + 200 - RadioYPetalo;
-                    DibujarPetalo(500, PetaloY, 15, 2, 300, 'green', CuantosPasos);
-                    DibujarPetalo(470, PetaloY2, 15, 2, 300, 'green', CuantosPasos);
+                    DibujarPetalo(500, PetaloY, 15, 2, 300, 'yellow', CuantosPasos);
+                    DibujarPetalo(470, PetaloY2, 15, 2, 300, 'yellow', CuantosPasos);
                     CuantosPasos++;
                     setTimeout(DibujarPetalosTallo, 100);
                 }
@@ -100,8 +100,8 @@ function DibujarFlor(x, y, NumeroPetalos, RadioXPetalo, RadioYPetalo, AltoTrazo)
         }
         // Dibuja el centro de la flor
         ctx.beginPath();
-        ctx.arc(x, y, 10, 0, Math.PI * 2);
-        ctx.fillStyle = 'white';
+        ctx.arc(x, y, 20, 0, Math.PI * 2); // Centro más grande
+        ctx.fillStyle = 'brown'; // Centro marrón oscuro
         ctx.fill();
     }
     dibujarSiguientePetalo();
@@ -119,7 +119,7 @@ function DibujarFlorSinTallo(x, y, NumeroPetalos, RadioXPetalo, RadioYPetalo, Al
             ctx.moveTo(x, y);
             ctx.lineTo(x, NuevaY);
             ctx.lineWidth = 3;
-            ctx.strokeStyle = 'black';
+            ctx.strokeStyle = 'green';
             ctx.stroke();
             NuevaY += AltoTallo;
             setTimeout(DibujarTallo, 100);
@@ -140,8 +140,8 @@ function DibujarFlorSinTallo(x, y, NumeroPetalos, RadioXPetalo, RadioYPetalo, Al
         }
         // Dibuja el centro de la flor
         ctx.beginPath();
-        ctx.arc(x, y, 10, 0, Math.PI * 2);
-        ctx.fillStyle = 'white';
+        ctx.arc(x, y, 20, 0, Math.PI * 2); // Centro más grande
+        ctx.fillStyle = 'brown'; // Centro marrón oscuro
         ctx.fill();
     }
     dibujarSiguientePetalo();
